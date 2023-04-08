@@ -24,7 +24,7 @@ public class ShopController {
                                          @RequestParam(required = false) Long streetId,
                                          @RequestParam(required = false) LocalTime opening,
                                          @RequestParam(required = false) LocalTime closing) {
-        return shopService.findShop(cityId, streetId, opening, closing);
+        return shopService.findShop(cityId, streetId);
     }
 }
 

@@ -27,8 +27,8 @@ public class ShopService {
         return shopRepo.save(shop).getId();
     }
 
-    public List<ShopDto> findShop(Long cityId, Long streetId, LocalTime opening, LocalTime closing){
-        List<Shop> shops = shopRepo.findShop(cityId,streetId,opening,closing);
+    public List<ShopDto> findShop(Long cityId, Long streetId){
+        List<Shop> shops = shopRepo.findShop(cityId,streetId);
         List<ShopDto> shopDtos = new ArrayList<>();
         for (Shop shop : shops){
             ShopDto dto = mapToDto(shop);

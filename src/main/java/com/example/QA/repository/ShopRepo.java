@@ -11,6 +11,6 @@ import java.util.List;
 
 @Repository
 public interface ShopRepo extends JpaRepository<Shop, Long> {
-    @Query(value = "select * from shop where city_id = ? or street_id = ? or opening = ?", nativeQuery = true)
-    List<Shop> findShop(Long cityId, Long streetId, LocalTime opening,LocalTime closing);
+    @Query(value = "select * from shop where city_id = ? or street_id = ?", nativeQuery = true)
+    List<Shop> findShop(Long cityId, Long streetId);
 }
