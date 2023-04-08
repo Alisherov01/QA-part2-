@@ -30,9 +30,9 @@ public class Shop {
     @Column(length = 200)
     private String house;
 
-    @DateTimeFormat(pattern = "HH:MM")
+    @DateTimeFormat(pattern = "HH:mm:ss")
     private LocalTime opening;
 
-    @DateTimeFormat(pattern = "HH:MM")
+    @DateTimeFormat(pattern = "HH:mm:ss")
     private LocalTime closing;
 }
